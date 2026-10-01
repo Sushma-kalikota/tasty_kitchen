@@ -1,0 +1,68 @@
+.header-tab {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  width: 600px;
+}
+
+.header-tab .heading h1 {
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(24, 59, 86, 1);
+  font-weight: 700;
+  font-size: 32px!important;
+  font-style: normal;
+}
+
+.heading p {
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(100, 116, 139, 1);
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.sort-by p {
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(100, 116, 139, 1);
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+  width: auto;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+.sort-container {
+  position: relative;
+}
+
+.sort-options {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 1000;
+  width: 100px;
+}
+
+.sort-options p {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+}

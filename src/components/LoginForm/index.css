@@ -1,0 +1,75 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+}
+.login-header{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8vh;
+}
+.login-header img {
+  display: block;
+  margin: 0 auto;
+}
+.login-left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+  color:#F7931E;
+}
+h1{
+  font-family: 'DM Sans', sans-serif;
+}
+h3{
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+  color:red;
+}
+button{
+  height:40px;
+  width:360px;
+  color:white;
+  background-color: #F7931E;
+  border-radius: 8px;
+  border:none;
+}
+.login-right {
+  width:50%;
+  height:100vh;
+  background-image: url('../../assets/login_image.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.login-container {
+  height: 523px;
+  width: 456px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 0 5px rgb(168, 167, 173);
+  border-radius: 15px;
+}
+.login_input{
+  display:flex;
+  flex-direction: column;
+  gap:2px;
+}
+.login_input label{
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  color: #475569;
+}
+
+.login_input input{
+  width: 360px;
+  height:33px;
+  background-color: #e2e8f0;
+  border: none;
+}

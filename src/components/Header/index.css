@@ -1,0 +1,54 @@
+.logo_items p{
+    color:#F7931E;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size:24px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap:40px!important;
+}
+.logo_items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_items{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:30px;
+}
+.nav_bar{
+    display:flex;
+    height:96px;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    background-color:#F8FAFC;
+}
+button{
+    width:73px;
+    height:32px;
+    background-color:#F7931E;
+    color:white;
+    border-radius:10px;
+}
+.nav_link{
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    color:#F7931E;
+    font-weight: 700;
+    font-size:16px;
+
+}
+.nav_link2{
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    color:#334155;
+    font-weight: 700;
+    font-size:16px;
+}
+button{
+    cursor:pointer;
+}
