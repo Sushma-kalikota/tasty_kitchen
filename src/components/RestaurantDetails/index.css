@@ -76,7 +76,7 @@ background-size: cover;
     width:255px;
     height:150px;
     border-radius: 8px;
-    margin-left:165px;
+    margin-left:0;
     object-fit: cover;
     flex-shrink: 0;
 }
@@ -85,7 +85,7 @@ background-size: cover;
   grid-template-columns: 400px 400px;
   column-gap: 60px;
   row-gap: 30px;
-  margin-left: 165px;
+  justify-content: center;
 }
 
 .dish-details h2{

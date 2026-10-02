@@ -15,10 +15,10 @@
   position: absolute;
   background: transparent;
   border: 2px dotted rgb(80, 57, 52);
-  color:rgb(90, 52, 44);
+  color:rgb(102, 62, 55);
   font-size: 30px;
   cursor: pointer;
-  margin:8px;
+  margin:9px;
   border-radius: 6px;
   bottom: 10px;
 }
@@ -30,4 +30,17 @@
 .right-arrow {
   left: 52%;
   margin:10px;
+}
+@media screen and (max-width: 768px) {
+  .left-arrow {
+    left: 38%;
+  }
+
+  .right-arrow {
+    left: 50%;
+  }
+  .offer-arrow {
+    bottom: 45px;
+  }
+
 }

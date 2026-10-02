@@ -121,7 +121,10 @@ const index = ({cart, setCart}) => {
                         <button onClick={() => increaseQuantity(eachDish.id)}>+</button>
                       </div>
                     ) : (
-                      <button onClick={() => addToCart(eachDish)}>ADD</button>
+                      <button onClick={() => {
+                         console.log('ADD CLICKED', eachDish.name)
+                         addToCart(eachDish)
+                         }}>ADD</button>
                     )}
                   </div>
                 </div>

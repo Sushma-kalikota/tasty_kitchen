@@ -13,7 +13,7 @@ const index = () => {
     <nav className='nav_bar'>
         <div className='logo_items'>
             <Link to="/home"><img src={logo} alt="tasty-kitchens"/></Link>
-            <p>Tasty Kitchens</p>
+            <Link to="/home" className='navLink'><p>Tasty Kitchens</p></Link>
             
         </div>
         <div className='nav_items'>
