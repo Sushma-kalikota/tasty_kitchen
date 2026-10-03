@@ -1,10 +1,10 @@
 .container {
-  width:90%;
-  margin:30px auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  column-gap:30px;
-  row-gap:20px;
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 25px;
 }
 
 .restaurant-card {
@@ -12,44 +12,66 @@
   border-radius: 12px;
   padding: 16px;
   background-color: #ffffff;
-  display:flex;
-  gap:18px;
-  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 40vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  animation: cardZoomIn 0.6s ease both;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.restaurant-card img {
-  width: 180px !important;
-  height: 120px !important;
-  object-fit: cover;
+.restaurant-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: #d1d5db;
 }
 
-.restaurant-details{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
 .restaurant-card img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
+  display: block;
+  flex-shrink: 0;
 }
 
-h1 {
-  margin: 8px 0;
-  font-family: 'DM Sans', sans-serif;
-  font-weight:700;
-  font-size:18px !important;
-  font-style: normal;
-  color:#334155
+.restaurant-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
 }
-h2{
+
+.restaurant-details h1 {
+  margin: 4px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px !important;
+  font-style: normal;
+  color: #334155;
+}
+
+.restaurant-details h2 {
+  margin: 0;
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
-  font-size:14px;
+  font-size: 14px;
   font-style: normal;
-  color:#64748B;
+  color: #64748b;
 }
 
 .rating {
@@ -65,7 +87,8 @@ h2{
   font-style: normal;
   line-height: 1.2;
   margin: 0;
-  width:50px;
+  width: 50px;
+  box-sizing: border-box;
 }
 
 .high-rating {
@@ -75,10 +98,26 @@ h2{
 .low-rating {
   background-color: #3bbb6a;
 }
+
+/* Entrance zoom animation */
+@keyframes cardZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 30px 0;
 }
@@ -95,19 +134,17 @@ h2{
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+
+  transition: none;
 }
 
-.pagination button:hover:not(:disabled) {
+.pagination button:hover:not(:disabled):not(.active-page) {
   background-color: #f1f5f9;
 }
 
-.pagination .active-page {
-  background-color: #f7931e;
-  color: #ffffff;
-  border-color: #f7931e;
-}
-
-.pagination .active-page:hover {
+.pagination button.active-page,
+.pagination button.active-page:hover,
+.pagination button.active-page:focus {
   background-color: #f7931e;
   color: #ffffff;
   border-color: #f7931e;

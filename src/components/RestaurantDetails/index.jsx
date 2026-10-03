@@ -7,6 +7,7 @@ const index = ({cart, setCart}) => {
   const {id} = useParams()
   const [restaurant, setRestaurant] = useState()
 
+
   const getDetails = async () => {
     const url = `https://apis.ccbp.in/restaurants-list/${id}`
     const token = Cookies.get('jwt_token')
@@ -19,6 +20,7 @@ const index = ({cart, setCart}) => {
 
     const response = await fetch(url, options)
     const data = await response.json()
+  
     setRestaurant(data)
   }
 
@@ -122,7 +124,6 @@ const index = ({cart, setCart}) => {
                       </div>
                     ) : (
                       <button onClick={() => {
-                         console.log('ADD CLICKED', eachDish.name)
                          addToCart(eachDish)
                          }}>ADD</button>
                     )}

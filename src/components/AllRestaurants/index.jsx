@@ -25,7 +25,7 @@ const index = ({selectedOption}) => {
 
     const response = await fetch(url, options)
     const data = await response.json()
-
+  
     setRestaurants(data.restaurants)
     setTotalPages(Math.ceil(data.total / 9))
   }
