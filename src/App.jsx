@@ -3,14 +3,21 @@ import LoginForm from './components/LoginForm'
 import Home from './components/Home'
 import RestaurantDetails from './components/RestaurantDetails'
 import Layout from './components/Layout'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import Cart from './components/Cart'
 import PaymentSuccessful from './components/PaymentSuccessful'
 import ProtectedRoute from './components/ProtectedRoute'
 import NotFound from './components/NotFound'
 
 const App = () => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(() => {
+  const savedCart = localStorage.getItem('cart')
+  return savedCart ? JSON.parse(savedCart) : []
+  })
+  useEffect(() => {
+  localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+  
   const [selectedOption, setSelectedOption] = useState('Lowest')
 
   return (
